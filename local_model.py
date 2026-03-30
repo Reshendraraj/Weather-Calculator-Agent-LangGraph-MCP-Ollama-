@@ -36,12 +36,12 @@ async def main():
     tools = await client.get_tools()
 
     # Local model (qwen or gemma3 from Ollama)
-    model = ChatOllama(model="qwen3:0.6b", temperature=0)  # 👈 Removed extra space
+    model = ChatOllama(model="qwen3:0.6b", temperature=0)  
 
    
     def call_model(state: MessagesState):
         # The messages are already LangChain message objects, no conversion needed
-        response = model.bind_tools(tools).invoke(state["messages"])  # 👈 Added bind_tools
+        response = model.bind_tools(tools).invoke(state["messages"])  
         return {"messages": [response]}
 
     # Build LangGraph workflow
