@@ -21,7 +21,7 @@ async def main():
         {
             "weather": {
                 "transport": "stdio",
-                "command": r"C:\Users\konde\Downloads\Deeplearning_NLP\langraph_mcp_server\mcp-openweather\mcp-weather.exe",
+                "command": "mcp-openweather\mcp-weather.exe",
                 "args": [],
                 "env": {"OWM_API_KEY": weather_api},
             },
